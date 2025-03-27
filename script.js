@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // ========================== Firebase ==========================
 import { addContact } from "./contactservice.js";
 
-document.getElementById("contactForm").addEventListener("submit", async function (event) {
-  event.preventDefault(); // Mencegah form mengirim data lewat URL
+document.getElementById("contactForm").addEventListener("submit", async (event) => {
+  event.preventDefault(); // Mencegah form refresh halaman
 
   // Ambil nilai input
   const name = document.querySelector('input[name="name"]').value;
@@ -58,7 +58,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
   try {
     await addContact({ name, email, message });
     alert("Pesan berhasil dikirim!");
-    this.reset(); // Reset form setelah submit
   } catch (error) {
     console.error("Error:", error);
     alert("Gagal mengirim pesan.");

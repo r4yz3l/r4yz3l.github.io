@@ -1,19 +1,17 @@
-console.log("Script Loaded");
-
-// Import Firebase (jika belum di-import di file lain)
+// Import Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
 // Konfigurasi Firebase
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyCiiLki_w_o8aO2tTcvJPnMM-Nf9vZW6Qw",
+  authDomain: "portofolio-z3l.firebaseapp.com",
+  projectId: "portofolio-z3l",
+  storageBucket: "portofolio-z3l.firebasestorage.app",
+  messagingSenderId: "132411553851",
+  appId: "1:132411553851:web:1ca354fea35735900d041e",
+  measurementId: "G-J2Z35NY6KL",
 };
-
 // Inisialisasi Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -22,10 +20,10 @@ const db = getFirestore(app);
 export const addContact = async (contact) => {
   try {
     const docRef = await addDoc(collection(db, "contacts"), contact);
-    console.log("Document written with ID: ", docRef.id);
-    alert("Pesan berhasil dikirim!");
+    console.log("Document written with ID:", docRef.id);
+    return docRef;
   } catch (e) {
-    console.error("Error adding document: ", e);
-    alert("Gagal mengirim pesan.");
+    console.error("Error adding document:", e);
+    throw e;
   }
 };
