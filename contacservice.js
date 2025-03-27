@@ -1,48 +1,29 @@
-import { collection, addDoc, getDocs, doc, updateDoc, deleteDoc } from "firebase/firestore";
-import { db } from "./firebase";
+// Import Firebase (jika belum di-import di file lain)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
-// **CREATE** → Menambahkan data kontak
+// Konfigurasi Firebase
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+
+// Inisialisasi Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Fungsi untuk menambah data ke Firestore
 export const addContact = async (contact) => {
   try {
-    await addDoc(collection(db, "contacts"), contact);
-    console.log("Contact added successfully");
+    const docRef = await addDoc(collection(db, "contacts"), contact);
+    console.log("Document written with ID: ", docRef.id);
+    alert("Pesan berhasil dikirim!");
   } catch (e) {
-    console.error("Error adding contact: ", e);
-  }
-};
-
-// **READ** → Mengambil data kontak
-export const getContacts = async () => {
-  try {
-    const querySnapshot = await getDocs(collection(db, "contacts"));
-    return querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
-  } catch (e) {
-    console.error("Error getting contacts: ", e);
-    return [];
-  }
-};
-
-// **UPDATE** → Memperbarui data kontak berdasarkan ID
-export const updateContact = async (id, updatedContact) => {
-  try {
-    const contactRef = doc(db, "contacts", id);
-    await updateDoc(contactRef, updatedContact);
-    console.log("Contact updated successfully");
-  } catch (e) {
-    console.error("Error updating contact: ", e);
-  }
-};
-
-// **DELETE** → Menghapus data kontak berdasarkan ID
-export const deleteContact = async (id) => {
-  try {
-    const contactRef = doc(db, "contacts", id);
-    await deleteDoc(contactRef);
-    console.log("Contact deleted successfully");
-  } catch (e) {
-    console.error("Error deleting contact: ", e);
+    console.error("Error adding document: ", e);
+    alert("Gagal mengirim pesan.");
   }
 };

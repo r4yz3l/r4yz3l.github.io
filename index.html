@@ -193,6 +193,31 @@
         <div class="row justify-content-center">
           <div class="col-md-6">
             <form id="contactForm">
+              <script type="module">
+                import { addContact } from './js/contactService.js';
+              
+                document.getElementById("contactForm").addEventListener("submit", async (e) => {
+                  e.preventDefault();
+              
+                  const name = document.getElementById("name").value;
+                  const email = document.getElementById("email").value;
+                  const message = document.getElementById("message").value;
+              
+                  if (!name || !email || !message) {
+                    alert("Semua field wajib diisi!");
+                    return;
+                  }
+              
+                  try {
+                    await addContact({ name, email, message });
+              
+                    // Reset form setelah submit berhasil
+                    document.getElementById("contactForm").reset();
+                  } catch (error) {
+                    console.error("Error submitting form:", error);
+                  }
+                });
+              </script>              
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
                 <input type="text" class="form-control" id="name" name="name" required autocomplete="off" />
