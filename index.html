@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Script js -->
+    <script src="script.js"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js"></script>
+
+    <title>My Portofolio | Muhammad Rafi</title>
+  </head>
+  <body id="home">
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: #0099ff">
+      <div class="container">
+        <a class="navbar-brand" href="#">Muhammad Rafi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <a class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#achievement">Achievement</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#decode">DeCode</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar-->
+
+    <!-- Jumbotron  -->
+    <section class="jumbotron text-center">
+      <img src="img/profile.jpg " alt="Muhammad Rafi" width="200" class="rounded-circle img-thumbnail" />
+      <h1 class="display-4">Muhammad Rafi</h1>
+      <p class="lead">Informatics Student | Business Division Leader</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L80,112C160,96,320,64,480,85.3C640,107,800,181,960,197.3C1120,213,1280,171,1360,149.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- End Jumbotron  -->
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2>About me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-4">
+            <p> Halo nama saya adalah Muhammad Rafi, merupakan seorang mahasiswa Informatika di Universitas Dehasen Bengkulu yang memiliki minat mendalam di dunia Cyber Security dan Network. Sejak awal perkuliahan, saya selalu antusias dalam mempelajari berbagai aspek keamanan siber, seperti penetration testing, digital forensics, dan network security. Saya sering mengikuti seminar serta kompetisi di bidang tersebut untuk mengasah kemampuannya dan memperluas jaringan profesionalnya di dunia teknologi.</p>
+          </div>
+          <div class="col-md-4">
+            <p>Selain aktif di dunia keamanan siber, saya juga bergabung dalam organisasi kampus bernama DeCode, sebuah komunitas di bawah Fakultas Ilmu Komputer yang bergerak di bidang teknologi. Dengan semangat kepemimpinan dan jiwa kewirausahaan, saya dipercaya untuk menjabat sebagai leader di bidang bisnis dalam organisasi ini. Dalam peran tersebut, saya bertanggung jawab dalam mengembangkan strategi bisnis berbasis teknologi, membangun kerja sama dengan berbagai pihak, serta menciptakan inovasi yang dapat memberikan manfaat bagi mahasiswa maupun masyarakat luas. Bergabung dengan DeCode memberi saya pengalaman berharga dalam mengelola bisnis, memperluas jaringan, dan menerapkan teknologi dalam dunia usaha.</p>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e2edff" fill-opacity="1" d="M0,128L30,112C60,96,120,64,180,64C240,64,300,96,360,133.3C420,171,480,213,540,192C600,171,660,85,720,69.3C780,53,840,107,900,122.7C960,139,1020,117,1080,112C1140,107,1200,117,1260,133.3C1320,149,1380,171,1410,181.3L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+    </section>
+    <!-- End About -->
+
+    <!-- Achievement -->
+    <section id="achievement">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>My Achievement</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Achiev/1.jpg" class="card-img-top" alt="Achievement 1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Achiev/2 .jpg" class="card-img-top" alt="Achievement 2" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Achiev/3.jpg" class="card-img-top" alt="Achievement 3" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L26.7,149.3C53.3,171,107,213,160,208C213.3,203,267,149,320,160C373.3,171,427,245,480,282.7C533.3,320,587,320,640,304C693.3,288,747,256,800,224C853.3,192,907,160,960,138.7C1013.3,117,1067,107,1120,106.7C1173.3,107,1227,117,1280,138.7C1333.3,160,1387,192,1413,208L1440,224L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- End Achievement -->
+
+    <!-- DeCode -->
+    <section id="decode">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2>DeCode</h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Artikel 1 -->
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h3 class="card-title">Pengalaman Pertama di DeCode</h3>
+                      <p class="card-text">
+                        Bergabung dengan komunitas DeCode tidak hanya memberikan wawasan di dunia teknologi, tetapi juga membuka peluang dalam bidang bisnis. Saya bersama tim memulai usaha kecil dengan menjual berbagai merchandise seperti gantungan kunci, baju, dan stiker bertema teknologi dan cyber security. Kami belajar bagaimana mengelola stok, melakukan pemasaran digital, dan meningkatkan engagement dengan anggota komunitas untuk meningkatkan penjualan. Pengalaman ini mengajarkan saya banyak hal tentang strategi bisnis, negosiasi, serta pentingnya membangun brand dalam komunitas teknologi.
+                      </p>
+                      <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Artikel 2 -->
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h3 class="card-title">Mengikuti Bootcamp Cyber Security</h3>
+                      <p class="card-text">
+                        Bootcamp ini memberikan pengalaman yang sangat berharga dalam memahami konsep dasar hingga lanjutan dalam dunia cyber security. Saya belajar mengenai ethical hacking, penetration testing, serta teknik forensik digital. Selain itu, saya juga berkesempatan untuk berlatih dengan berbagai skenario serangan siber dan bagaimana cara mengatasinya. Pengalaman ini tidak hanya memperluas wawasan saya, tetapi juga membangun jaringan dengan profesional di industri keamanan siber.
+                      </p>
+                      <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Artikel 3 -->
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h3 class="card-title">Proyek Kolaborasi DeCode</h3>
+                      <p class="card-text">
+                        Bersama tim DeCode, kami akan membangun proyek sistem Internet of Things. Ini menjadi tantangan sekaligus pengalaman luar biasa dalam dunia teknologi. Kami mengembangkan sistem yang memungkinkan perangkat untuk saling berkomunikasi secara otomatis, dengan fokus pada keamanan data dan efisiensi jaringan. Dalam prosesnya, kami menggunakan teknologi seperti esp32, sensor pintar, dan enkripsi data untuk memastikan sistem berjalan dengan aman dan optimal.
+                      </p>
+                      <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </section>
+    
+    <!-- End DeCode -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Contact Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" name="name" required autocomplete="off" />
+              </div>
+            
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required autocomplete="off" />
+              </div>
+            
+              <div class="mb-3">
+                <label for="message" class="form-label">Pesan</label>
+                <textarea class="form-control" id="message" name="message" required></textarea>
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0d6efd"
+          fill-opacity="1"
+          d="M0,128L30,144C60,160,120,192,180,186.7C240,181,300,139,360,149.3C420,160,480,224,540,245.3C600,267,660,245,720,224C780,203,840,181,900,192C960,203,1020,245,1080,240C1140,235,1200,181,1260,160C1320,139,1380,149,1410,154.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- End Contact -->
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center pb-5">
+      <p>Created with <i class="bi bi-heartbreak-fill text-danger"></i> by <a href="https://www.instagram.com/r4yz3l" class="text-white fw-bold">Muhammad Rafi</a></p>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
