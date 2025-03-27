@@ -1,3 +1,5 @@
+console.log("Script Loaded");
+
 // Import Firebase (jika belum di-import di file lain)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";

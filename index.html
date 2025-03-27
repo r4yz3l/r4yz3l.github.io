@@ -17,6 +17,7 @@
 
     <title>My Portofolio | Muhammad Rafi</title>
   </head>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <body id="home">
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: #0099ff">
@@ -192,13 +193,14 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form id="contactForm">
+            <form id="contactForm" method="POST">
               <script type="module">
-                import { addContact } from './js/contactService.js';
+                import { addContact } from './contactservice.js';
               
                 document.getElementById("contactForm").addEventListener("submit", async (e) => {
                   e.preventDefault();
-              
+                  console.log("Form submission prevented!");
+
                   const name = document.getElementById("name").value;
                   const email = document.getElementById("email").value;
                   const message = document.getElementById("message").value;
@@ -255,5 +257,7 @@
     <!-- End Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="./contactservice.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
