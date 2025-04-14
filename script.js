@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ========================== Firebase ==========================
-import { addContact } from "./contactservice.js";
+import { addContact } from "./firebase.js";
 
 document.getElementById("contactForm").addEventListener("submit", async (event) => {
   event.preventDefault(); // Mencegah form refresh halaman
