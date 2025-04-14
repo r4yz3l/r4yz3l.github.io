@@ -4,14 +4,15 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 
 // Konfigurasi Firebase
 const firebaseConfig = {
-  apiKey: import.meta.env.API_KEY,
-  authDomain: import.meta.env.AUTH_DOMAIN,
-  projectId: import.meta.env.PROJECT_ID,
-  storageBucket: import.meta.env.STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.MESSAGING_SENDER_ID,
-  appId: import.meta.env.APP_ID,
-  measurementId: import.meta.env.MEASUREMENT_ID,
+  apiKey: "AIzaSyCo9D1kmdwHxaomvlU4SYLh48d2H3onRic",
+  authDomain: "portofolio-z3l-896d0.firebaseapp.com",
+  projectId: "portofolio-z3l-896d0",
+  storageBucket: "portofolio-z3l-896d0.firebasestorage.app",
+  messagingSenderId: "196865920623",
+  appId: "1:196865920623:web:60d7970c2e23477ec5c79a",
+  measurementId: "G-DCEGSYQSNT",
 };
+
 // Inisialisasi Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
